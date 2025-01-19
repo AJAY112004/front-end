@@ -1,1 +1,105 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="toggle">
+      <input type="checkbox" id="btn" />
+      <label for="btn">
+        <span class="thumb"></span>
+      </label>
+    </div>
+
+    <div class="sign">
+      <form action="/submit-form" method="POST" id="form-sign-up">
+        <h2>Sign Up</h2>
+        <label for="a">First Name</label>
+        <input
+          type="text"
+          id="a"
+          name="first_name"
+          placeholder="Enter your first name"
+          required
+        /><br />
+
+        <label for="b">User Name</label>
+        <input
+          type="text"
+          id="b"
+          name="user_name"
+          placeholder="Enter your username"
+          required
+        /><br />
+
+        <label for="c">Email</label>
+        <input
+          type="email"
+          id="c"
+          name="email"
+          placeholder="Enter your email"
+          required
+        /><br />
+
+        <label for="d">Password</label>
+        <input
+          type="password"
+          id="d"
+          name="password"
+          placeholder="Enter your password"
+          required
+        /><br />
+
+        <label for="e">Confirm Password</label>
+        <input
+          type="password"
+          id="e"
+          name="confirm_password"
+          placeholder="Re-enter your password"
+          required
+        /><br />
+
+        <input type="submit" value="Sign Up" />
+      </form>
+
+      <form
+        action="/submit-login"
+        method="POST"
+        id="form-sign-in"
+        style="display: none"
+      >
+        <h2>Sign In</h2>
+        <label for="a">User Name</label>
+        <input
+          type="text"
+          id="b"
+          name="user_name"
+          placeholder="Enter your username"
+          required
+        /><br />
+
+        <label for="d">Password</label>
+        <input
+          type="password"
+          id="d"
+          name="password"
+          placeholder="Enter your password"
+          required
+        /><br />
+
+        <input type="submit" value="Sign In" />
+      </form>
+
+      <!-- Social Media Login Options -->
+      <div class="social-login">
+        <button class="social-btn google-btn">Login with Google</button>
+        <button class="social-btn facebook-btn">Login with Facebook</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
