@@ -1,22 +1,23 @@
+// Add a smooth scroll to the "Explore Features" button
+document.querySelector('.btn').addEventListener('click', function (event) {
+  event.preventDefault();  // Prevent default anchor behavior
+  const targetSection = document.querySelector('#features');
+  window.scrollTo({
+    top: targetSection.offsetTop,
+    behavior: 'smooth'
+  });
+});
 
-// JavaScript for Home Page Navigation
+// Simple form validation (you can add more logic if needed)
+document.querySelector('form').addEventListener('submit', function (event) {
+  const name = document.querySelector('#name').value;
+  const email = document.querySelector('#email').value;
+  const message = document.querySelector('#message').value;
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Add event listeners to navbar items
-    const navItems = document.querySelectorAll('.navbar ul li');
-
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            alert(`You clicked on ${item.textContent}`);
-            // Additional functionality for navigation can be added here
-        });
-    });
-
-    // Example: Highlight the clicked item
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            navItems.forEach(nav => nav.classList.remove('active'));
-            item.classList.add('active');
-        });
-    });
+  if (!name || !email || !message) {
+    event.preventDefault();  // Prevent form submission
+    alert('Please fill in all fields');
+  } else {
+    alert('Message sent successfully!');
+  }
 });
