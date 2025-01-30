@@ -1,5 +1,3 @@
-// JavaScript for Shows Page
-
 document.addEventListener('DOMContentLoaded', () => {
     // Example: Add interactivity to show items
     const showItems = document.querySelectorAll('.show-item');
