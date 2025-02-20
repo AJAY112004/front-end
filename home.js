@@ -1,4 +1,3 @@
-// Add a smooth scroll to the "Explore Features" button
 document.querySelector('.btn').addEventListener('click', function (event) {
   event.preventDefault();  // Prevent default anchor behavior
   const targetSection = document.querySelector('#features');
