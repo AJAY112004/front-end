@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Highlight active navbar link
     const navLinks = document.querySelectorAll('.navbar ul li a');
 
     navLinks.forEach(link => {
