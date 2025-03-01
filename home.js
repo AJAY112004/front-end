@@ -1,22 +1,23 @@
-document.querySelector('.btn').addEventListener('click', function (event) {
-  event.preventDefault();  // Prevent default anchor behavior
-  const targetSection = document.querySelector('#features');
-  window.scrollTo({
-    top: targetSection.offsetTop,
-    behavior: 'smooth'
-  });
-});
-
-// Simple form validation (you can add more logic if needed)
-document.querySelector('form').addEventListener('submit', function (event) {
-  const name = document.querySelector('#name').value;
-  const email = document.querySelector('#email').value;
-  const message = document.querySelector('#message').value;
-
-  if (!name || !email || !message) {
-    event.preventDefault();  // Prevent form submission
-    alert('Please fill in all fields');
-  } else {
-    alert('Message sent successfully!');
+function appendToDisplay(value) {
+    const display = document.getElementById('display');
+    display.value += value;
   }
-});
+  
+  function clearDisplay() {
+    const display = document.getElementById('display');
+    display.value = '';
+  }
+  
+  function deleteLast() {
+    const display = document.getElementById('display');
+    display.value = display.value.slice(0, -1);
+  }
+  
+  function calculate() {
+    const display = document.getElementById('display');
+    try {
+      display.value = eval(display.value);
+    } catch (error) {
+      display.value = 'Error';
+    }
+  }
