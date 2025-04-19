@@ -10,7 +10,6 @@ var currColumns = [];
 window.onload = function() {
     setGame();
 }
-
 function setGame() {
     board = [];
     currColumns = [5, 5, 5, 5, 5, 5, 5];
