@@ -1,10 +1,8 @@
 var playerRed = "R";
 var playerYellow = "Y";
 var currPlayer = playerRed;
-
 var gameOver = false;
 var board;
-
 var rows = 6;
 var columns = 7;
 var currColumns = []; 
