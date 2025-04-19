@@ -37,8 +37,6 @@ function setPiece() {
     if (gameOver) {
         return;
     }
-
-    //get coords of that tile clicked
     let coords = this.id.split("-");
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
